@@ -1,0 +1,5 @@
+game.StarterGui:SetCore("SendNotification", {
+Title = "Client Error"; -- the title (ofc)
+Text = "Sorry, but the Script isn't Updated / Unavailable"; -- what the text says (ofc)
+Duration = 7; -- how long the notification should in secounds
+})
