@@ -1,0 +1,41 @@
+-- Gui to Lua
+-- Version: 3
+
+-- Instances:
+
+local PandaLogo = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+PandaLogo.Name = "PandaLogo"
+PandaLogo.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+PandaLogo.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+PandaLogo.ResetOnSpawn = false
+
+Frame.Parent = PandaLogo
+Frame.BackgroundColor3 = Color3.new(0.0588235, 0.686275, 0.94902)
+Frame.BackgroundTransparency = 0.60000002384186
+Frame.Position = UDim2.new(0, 0, 0.943073988, 0)
+Frame.Size = UDim2.new(0, 240, 0, 45)
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel.BackgroundTransparency = 1
+ImageLabel.Position = UDim2.new(9.53674316e-07, 0, 0, 0)
+ImageLabel.Size = UDim2.new(0, 46, 0, 42)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=5179834402"
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Position = UDim2.new(0.191666663, 0, 0.244444445, 0)
+TextLabel.Size = UDim2.new(0, 165, 0, 20)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Powered by Panda Technology"
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextWrapped = true
