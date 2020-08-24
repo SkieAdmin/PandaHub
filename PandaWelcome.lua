@@ -38,7 +38,7 @@ name.TextWrapped = true
 repeat wait() until game:IsLoaded() 
 	
 local intro_frame = intro
-local txt = "Panda Exploit A+"
+local txt = "Panda-Ex S+ Loaded"
 	
 local function TweenText(TextLabel,Text)
 	local Letters = #Text
@@ -57,7 +57,12 @@ intro_frame:TweenPosition(UDim2.new(0.5, 0,0.5, 0),"Out","Quad",.3,true,function
 	wait(.6)
 	PanaHilixLoader:Destroy()
 end)
-wait(4)
+wait(5)
+-- Gui to Lua
+-- Version: 3
+
+-- Instances:
+
 local PandaLogo = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local ImageLabel = Instance.new("ImageLabel")
@@ -66,7 +71,7 @@ local TextLabel = Instance.new("TextLabel")
 --Properties:
 
 PandaLogo.Name = "PandaLogo"
-PandaLogo.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+PandaLogo.Parent = game.CoreGui
 PandaLogo.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 PandaLogo.ResetOnSpawn = false
 
