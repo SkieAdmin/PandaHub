@@ -1,0 +1,19 @@
+print("[PANDA] Saving Game...")
+game.StarterGui:SetCore("SendNotification", {
+Title = "Panda Save Instance"; -- the title (ofc)
+Text = "Initializing Saving!"; -- what the text says (ofc)
+})
+
+local start = game:HttpGet("https://pastebin.com/raw/1Tuj3CF7")
+for i,v in pairs(game.Workspace:GetDescendants()) do
+    if v:IsA("Part") then
+        start = start..'<Item class="Part" referent="RBX713F6853A0A748419CD04C9A077C10D4"><Properties><bool name="Anchored">'..tostring(v.Anchored)..'</bool><BinaryString name="AttributesSerialize"></BinaryString><bool name="CanCollide">'..tostring(v.CanCollide)..'</bool><bool name="CastShadow">'..tostring(v.CastShadow)..'</bool><int name="CollisionGroupId">0</int><string name="Name">'..tostring(v.Name)..'</string><float name="Reflectance">'..tostring(v.Reflectance)..'</float><BinaryString name="Tags"></BinaryString><float name="Transparency">'..tostring(v.Transparency)..'</float><Vector3 name="size"> <X>'..tostring(v.Size.X)..'</X> <Y>'..tostring(v.Size.Y)..'</Y> <Z>'..tostring(v.Size.Z)..'</Z> </Vector3><Color3 name="Color"><R>'..tostring(v.Color.R)..'</R><G>'..tostring(v.Color.G)..'</G><B>'..tostring(v.Color.B)..'</B></Color3><Vector3 name="Position"><X>'..v.Position.X..'</X><Y>'..v.Position.Y..'</Y><Z>'..v.Position.Z..'</Z></Vector3><Vector3 name="Orientation"><X>'..v.Orientation.X..'</X><Y>'..v.Orientation.Y..'</Y><Z>'..v.Orientation.Z..'</Z></Vector3></Properties></Item>'
+    end
+end
+start = start..game:HttpGet("https://pastebin.com/raw/itDEZ39X")
+writefile(game.PlaceId..".rbxlx",start)
+print("{PANDA} Complete.")
+game.StarterGui:SetCore("SendNotification", {
+Title = "Panda Save Instance"; -- the title (ofc)
+Text = "Successfully Saved on Workspaces"; -- what the text says (ofc)
+})
